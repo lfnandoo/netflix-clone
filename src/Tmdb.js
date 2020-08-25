@@ -4,7 +4,6 @@ const API_BASE = "https://api.themoviedb.org/3";
 const basicFetch = async (endpoint) => {
   const req = await fetch(`${API_BASE}${endpoint}`);
   const json = await req.json();
-  console.log(json);
   return json;
 };
 
