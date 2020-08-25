@@ -8,6 +8,11 @@ export default ({ item }) => {
   for (let i in item.genres) {
     genres.push(item.genres[i].name);
   }
+
+  let pointsStyle;
+  if (item.vote_average >= 6) pointsStyle = { color: "#46d369" };
+  if (item.vote_average < 6) pointsStyle = { color: "red" };
+
   return (
     <section
       className="featured"
@@ -21,7 +26,7 @@ export default ({ item }) => {
         <div className="featured--horizontal">
           <div className="featured--name">{item.original_name}</div>
           <div className="featured--info">
-            <div className="featured--points">
+            <div className="featured--points" style={pointsStyle}>
               {item.vote_average}{" "}
               <strong>point{item.vote_average !== 1 ? "s" : ""}</strong>
             </div>
@@ -29,16 +34,21 @@ export default ({ item }) => {
             <div className="featured--seasons">
               {item.number_of_seasons} season
               {item.number_of_seasons !== 1 ? "s" : ""}
-              <div className="featured-description">{item.overview}</div>
-              <div className="featured--buttons">
-                <a href={`/watch/${item.id}`}>► Play</a>
-                <a href={`list/add/${item.id}`}>+ My list</a>
-              </div>
-              <div className="featured--genres">
-                <strong>Genres: </strong>
-                {genres.join(", ")}
-              </div>
             </div>
+          </div>
+
+          <div className="featured-description">{item.overview}</div>
+          <div className="featured--buttons">
+            <a href={`/watch/${item.id}`} className="featured-watchbutton">
+              ► Play
+            </a>
+            <a href={`list/add/${item.id}`} className="featured-mylistbutton">
+              + My list
+            </a>
+          </div>
+          <div className="featured--genres">
+            <strong>Genres: </strong>
+            {genres.join(", ")}
           </div>
         </div>
       </div>
