@@ -64,4 +64,23 @@ export default {
       },
     ];
   },
+  getMovieInfo: async (movieId, type) => {
+    let info = {};
+
+    if (movieId) {
+      switch (type) {
+        case "movie":
+          info = await basicFetch(`/movie/${movieId}?api_key=${API_KEY}`);
+          break;
+        case "tv":
+          info = await basicFetch(`/tv/${movieId}?api_key=${API_KEY}`);
+          break;
+        default:
+          info = null;
+          break;
+      }
+    }
+
+    return info;
+  },
 };
