@@ -12,7 +12,7 @@
 }
 
 .movieRow--list {
-  width: 9999999px;
+  transition: all ease 500ms;
 }
 
 .movieRow--item {
@@ -31,7 +31,7 @@
   transform: scale(1);
 }
 
-.moviewRow--left,
+.movieRow--left,
 .movieRow--right {
   position: absolute;
   width: 40px;
@@ -47,12 +47,12 @@
   transition: all ease 200ms;
 }
 
-.movieRow:hover .moviewRow--left,
+.movieRow:hover .movieRow--left,
 .movieRow:hover .movieRow--right {
   opacity: 1;
 }
 
-.moviewRow--left {
+.movieRow--left {
   left: 0;
 }
 
