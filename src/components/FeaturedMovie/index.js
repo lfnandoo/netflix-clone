@@ -9,6 +9,11 @@ export default ({ item }) => {
     genres.push(item.genres[i].name);
   }
 
+  let description = item.overview;
+  if (description.length > 200) {
+    description = description.substring(0, 200) + "...";
+  }
+
   let pointsStyle;
   if (item.vote_average >= 6) pointsStyle = { color: "#46d369" };
   if (item.vote_average < 6) pointsStyle = { color: "red" };
@@ -37,12 +42,12 @@ export default ({ item }) => {
             </div>
           </div>
 
-          <div className="featured-description">{item.overview}</div>
+          <div className="featured--description">{description}</div>
           <div className="featured--buttons">
-            <a href={`/watch/${item.id}`} className="featured-watchbutton">
+            <a href={`/watch/${item.id}`} className="featured--watchbutton">
               ► Play
             </a>
-            <a href={`list/add/${item.id}`} className="featured-mylistbutton">
+            <a href={`list/add/${item.id}`} className="featured--mylistbutton">
               + My list
             </a>
           </div>
