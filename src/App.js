@@ -55,14 +55,23 @@ function App() {
       </section>
 
       <footer>
-        Feito com{" "}
-        <span role="img" aria-label="coração">
+        Made with{" "}
+        <span role="img" aria-label="heart">
           ❤
         </span>{" "}
-        por <a href="https://github.com/lfnandoo">Luiz Fernando</a>. Direitos de
-        imagem para Netflix <br />
-        Dados pegos do site Themoviedb.org
+        by <a href="https://github.com/lfnandoo">Luiz Fernando</a>. Image rights
+        for Netflix
+        <br />
+        Data by website Themoviedb.org
       </footer>
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://www.filmelier.com/pt/br/news/wp-content/uploads/2020/03/netflix-loading.gif"
+            alt="Loading"
+          />
+        </div>
+      )}
     </div>
   );
 }
