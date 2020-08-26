@@ -41,10 +41,6 @@ function App() {
   }, []);
 
   return (
-    // HEADER
-    // Trending
-    // Lists
-    // Footer
     <div className="page">
       <Header black={blackHeader} />
       {featureData && <FeaturedMovie item={featureData} />}
@@ -59,9 +55,8 @@ function App() {
         <span role="img" aria-label="heart">
           ❤
         </span>{" "}
-        by <a href="https://github.com/lfnandoo">Luiz Fernando</a>. Image rights
-        for Netflix
-        <br />
+        by <a href="https://github.com/lfnandoo">Luiz Fernando</a>. <br />
+        Image rights for Netflix <br />
         Data by website Themoviedb.org
       </footer>
       {movieList.length <= 0 && (
