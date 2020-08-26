@@ -19,7 +19,7 @@
 
 ## :rocket: Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Project made with:
 
 - ReactJS
 - CSS
@@ -36,4 +36,4 @@ This aplication was made for practice ReactJS to practice.
 
 ---
 
-Feito com 💜 por Luiz Fernando :wave: [Linkedin](https://www.linkedin.com/in/luizfernandoo/) & [Twitter](https://www.twitter.com/lfnandoo/)
+Made with 💜 by Luiz Fernando :wave: [Linkedin](https://www.linkedin.com/in/luizfernandoo/)
