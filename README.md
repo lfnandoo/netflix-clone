@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  🚀 React Clone - ReactJS
+  🚀 Netflix Clone - ReactJS
 </h4>
 <h4 align="center">
  🔥 <a href="https://netflix-clone-liard.vercel.app">Demo</a>
@@ -26,7 +26,7 @@ Project made with:
 
 ## 💻 Project
 
-This aplication was made for practice ReactJS to practice.
+This aplication was made with ReactJS to practice.
 
 ## 🔖 Layout
 
